@@ -1,6 +1,7 @@
 // polyhedra
 $fn=60;
-rod_d = 4.6;
+rod_d = 4.5;
+
 
 
 module round_base(radius){
@@ -11,7 +12,7 @@ module round_base(radius){
 }
 
 module regular_dodecahedron_vertex(size){
-    d_ang = 90-31.72;
+    d_ang = 90-31.72;  // angle off the pentagon plane
     difference(){
         round_base(size);
         union(){
@@ -28,4 +29,4 @@ module regular_dodecahedron_vertex(size){
 // ** construct *** //
 
 //round_base(5);
-regular_dodecahedron_vertex(10);
+regular_dodecahedron_vertex(12);
